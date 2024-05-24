@@ -11,7 +11,13 @@ ENV LANG="C.UTF-8" \
     SERVER="emby"
 
 # 安装git
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git wget && \
+    cd /tmp && \
+    wget https://github.com/go-acme/lego/releases/download/v3.7.0/lego_v3.7.0_linux_amd64.tar.gz && \
+    tar zxvf lego_v3.7.0_linux_amd64.tar.gz && \
+    chmod 755 lego && \
+    mv lego /embyExternalUrl/ && \
+    rm -rf *
 
 # 拉取代码
 RUN git clone $REPO_URL /embyExternalUrl
