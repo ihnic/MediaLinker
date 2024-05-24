@@ -23,6 +23,7 @@ fi
 
 if [ "${SSL}" = "true" ]; then
   sed -i 's/#.*include \/etc\/nginx\/conf.d\/includes\/https.conf;/include \/etc\/nginx\/conf.d\/includes\/https.conf;/' /etc/nginx/conf.d/*.conf
+  check_certificate
 else
   sed -i 's/include \/etc\/nginx\/conf.d\/includes\/https\.conf;/#&/g' /etc/nginx/conf.d/*.conf
 fi
