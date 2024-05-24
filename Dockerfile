@@ -6,6 +6,7 @@ ENV LANG="C.UTF-8" \
     NGINX_PORT="8091" \
     NGINX_SSL_PORT="8095" \
     REPO_URL="https://github.com/bpking1/embyExternalUrl.git" \
+    SSL="true" \
     AUTO_UPDATE="true" \
     SERVER="emby"
 
