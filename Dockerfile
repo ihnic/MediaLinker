@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y git wget && \
     wget https://github.com/go-acme/lego/releases/download/v3.7.0/lego_v3.7.0_linux_amd64.tar.gz && \
     tar zxvf lego_v3.7.0_linux_amd64.tar.gz && \
     chmod 755 lego && \
-    mv lego /embyExternalUrl/ && \
+    mv lego / && \
     rm -rf *
 
 # 拉取代码
